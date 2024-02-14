@@ -1,0 +1,35 @@
+DELETE http://localhost:8080/events/1
+Accept: application/json
+
+###
+PUT http://localhost:8080/events/3
+Content-Type: application/json
+
+{
+  "name": "updated name",
+  "description": "updated description",
+  "location": "updated location",
+  "dateTime": "2024-02-29T15:30:00.000Z"
+}
+
+###
+GET http://localhost:8080/events
+Accept: application/json
+
+###
+POST http://localhost:8080/events
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdDVAZ21haWwuY29tIiwiZXhwIjoxNzA3OTQ3ODI0LCJ1c2VySWQiOjB9.KgjvshWQYhZ7oi97uLdpOjjfdaz1FWxyroahC4V5Jgk
+
+{
+  "name": "event5",
+  "description": "test event5",
+  "location": "online event5",
+  "dateTime": "2024-02-29T15:30:00.000Z"
+}
+
+###
+
+GET http://localhost:8080/events/3
+Accept: application/json
+
